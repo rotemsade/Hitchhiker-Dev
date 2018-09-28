@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020F961D73F368EECE47AF1E /* Pods_Hitchhiker_Dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BF52D69AF2D0BE739A552C /* Pods_Hitchhiker_Dev.framework */; };
 		66D850A3215E5EBC00F23A5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D850A2215E5EBC00F23A5D /* AppDelegate.swift */; };
 		66D850A5215E5EBC00F23A5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D850A4215E5EBC00F23A5D /* ViewController.swift */; };
 		66D850A8215E5EBC00F23A5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D850A6215E5EBC00F23A5D /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2FB36C5E9F4E1400A5D9C2CC /* Pods-Hitchhiker Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hitchhiker Dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hitchhiker Dev/Pods-Hitchhiker Dev.debug.xcconfig"; sourceTree = "<group>"; };
+		30571EA9EB84D46320F6905A /* Pods-Hitchhiker Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hitchhiker Dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hitchhiker Dev/Pods-Hitchhiker Dev.release.xcconfig"; sourceTree = "<group>"; };
 		66D8509F215E5EBC00F23A5D /* Hitchhiker Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hitchhiker Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D850A2215E5EBC00F23A5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66D850A4215E5EBC00F23A5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		66D850A9215E5EBD00F23A5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66D850AC215E5EBD00F23A5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66D850AE215E5EBD00F23A5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6BF52D69AF2D0BE739A552C /* Pods_Hitchhiker_Dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hitchhiker_Dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				020F961D73F368EECE47AF1E /* Pods_Hitchhiker_Dev.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54DD9F6BC065F0B36E79DA83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FB36C5E9F4E1400A5D9C2CC /* Pods-Hitchhiker Dev.debug.xcconfig */,
+				30571EA9EB84D46320F6905A /* Pods-Hitchhiker Dev.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		66D85096215E5EBC00F23A5D = {
 			isa = PBXGroup;
 			children = (
 				66D850A1215E5EBC00F23A5D /* Hitchhiker Dev */,
 				66D850A0215E5EBC00F23A5D /* Products */,
+				54DD9F6BC065F0B36E79DA83 /* Pods */,
+				7C1106D09311EA32767E12A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = "Hitchhiker Dev";
 			sourceTree = "<group>";
 		};
+		7C1106D09311EA32767E12A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6BF52D69AF2D0BE739A552C /* Pods_Hitchhiker_Dev.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66D850B1215E5EBD00F23A5D /* Build configuration list for PBXNativeTarget "Hitchhiker Dev" */;
 			buildPhases = (
+				C28F9008562178E46398C41D /* [CP] Check Pods Manifest.lock */,
 				66D8509B215E5EBC00F23A5D /* Sources */,
 				66D8509C215E5EBC00F23A5D /* Frameworks */,
 				66D8509D215E5EBC00F23A5D /* Resources */,
+				2D5215814B7689A86C56374E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,61 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D5215814B7689A86C56374E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Hitchhiker Dev/Pods-Hitchhiker Dev-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hitchhiker Dev/Pods-Hitchhiker Dev-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C28F9008562178E46398C41D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hitchhiker Dev-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		66D8509B215E5EBC00F23A5D /* Sources */ = {
@@ -280,6 +361,7 @@
 		};
 		66D850B2215E5EBD00F23A5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FB36C5E9F4E1400A5D9C2CC /* Pods-Hitchhiker Dev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +380,7 @@
 		};
 		66D850B3215E5EBD00F23A5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30571EA9EB84D46320F6905A /* Pods-Hitchhiker Dev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
