@@ -13,6 +13,8 @@
 		66D850A8215E5EBC00F23A5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D850A6215E5EBC00F23A5D /* Main.storyboard */; };
 		66D850AA215E5EBD00F23A5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D850A9215E5EBD00F23A5D /* Assets.xcassets */; };
 		66D850AD215E5EBD00F23A5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D850AB215E5EBD00F23A5D /* LaunchScreen.storyboard */; };
+		66D850B8215E954900F23A5D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D850B7215E954900F23A5D /* GradientView.swift */; };
+		66D850BA215EC60300F23A5D /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D850B9215EC60300F23A5D /* RoundImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		66D850A9215E5EBD00F23A5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66D850AC215E5EBD00F23A5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66D850AE215E5EBD00F23A5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66D850B7215E954900F23A5D /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		66D850B9215EC60300F23A5D /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		D6BF52D69AF2D0BE739A552C /* Pods_Hitchhiker_Dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hitchhiker_Dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,6 +74,9 @@
 		66D850A1215E5EBC00F23A5D /* Hitchhiker Dev */ = {
 			isa = PBXGroup;
 			children = (
+				66D850B6215E94E200F23A5D /* Model */,
+				66D850B5215E94D500F23A5D /* View */,
+				66D850B4215E94C300F23A5D /* Controller */,
 				66D850A2215E5EBC00F23A5D /* AppDelegate.swift */,
 				66D850A4215E5EBC00F23A5D /* ViewController.swift */,
 				66D850A6215E5EBC00F23A5D /* Main.storyboard */,
@@ -78,6 +85,29 @@
 				66D850AE215E5EBD00F23A5D /* Info.plist */,
 			);
 			path = "Hitchhiker Dev";
+			sourceTree = "<group>";
+		};
+		66D850B4215E94C300F23A5D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		66D850B5215E94D500F23A5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66D850B7215E954900F23A5D /* GradientView.swift */,
+				66D850B9215EC60300F23A5D /* RoundImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		66D850B6215E94E200F23A5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7C1106D09311EA32767E12A0 /* Frameworks */ = {
@@ -217,7 +247,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				66D850A5215E5EBC00F23A5D /* ViewController.swift in Sources */,
+				66D850BA215EC60300F23A5D /* RoundImageView.swift in Sources */,
 				66D850A3215E5EBC00F23A5D /* AppDelegate.swift in Sources */,
+				66D850B8215E954900F23A5D /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
