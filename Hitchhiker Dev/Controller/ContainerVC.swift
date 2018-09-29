@@ -36,6 +36,7 @@ class ContainerVC: UIViewController {
     let centerPanelExpandedOffset: CGFloat = 160
     
     var tap: UITapGestureRecognizer!
+    var swipeLeft : UISwipeGestureRecognizer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -149,11 +150,17 @@ extension ContainerVC: CenterVCDelegate {
         tap = UITapGestureRecognizer(target: self, action: #selector(animateLeftPanel(shouldExpand:)))
         tap.numberOfTapsRequired = 1
         
+        swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(animateLeftPanel(shouldExpand:)))
+        swipeLeft.direction = .left
+        swipeLeft.numberOfTouchesRequired = 1
+        
         centerController.view.addGestureRecognizer(tap)
+        centerController.view.addGestureRecognizer(swipeLeft)
     }
     
     func hideWhiteCoverView() {
         centerController.view.removeGestureRecognizer(tap)
+        centerController.view.removeGestureRecognizer(swipeLeft)
         for subview in self.centerController.view.subviews {
             if subview.tag == 25 {
                 UIView.animate(withDuration: 0.2, animations: {
