@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		020F961D73F368EECE47AF1E /* Pods_Hitchhiker_Dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BF52D69AF2D0BE739A552C /* Pods_Hitchhiker_Dev.framework */; };
+		664880D3215F7188006D89D3 /* LeftSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664880D2215F7188006D89D3 /* LeftSidePanelVC.swift */; };
+		664880D5215F72B4006D89D3 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664880D4215F72B4006D89D3 /* ContainerVC.swift */; };
+		664880D8215F7B95006D89D3 /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664880D7215F7B95006D89D3 /* CenterVCDelegate.swift */; };
 		66D850A3215E5EBC00F23A5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D850A2215E5EBC00F23A5D /* AppDelegate.swift */; };
 		66D850A5215E5EBC00F23A5D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D850A4215E5EBC00F23A5D /* HomeVC.swift */; };
 		66D850A8215E5EBC00F23A5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D850A6215E5EBC00F23A5D /* Main.storyboard */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		2FB36C5E9F4E1400A5D9C2CC /* Pods-Hitchhiker Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hitchhiker Dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hitchhiker Dev/Pods-Hitchhiker Dev.debug.xcconfig"; sourceTree = "<group>"; };
 		30571EA9EB84D46320F6905A /* Pods-Hitchhiker Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hitchhiker Dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hitchhiker Dev/Pods-Hitchhiker Dev.release.xcconfig"; sourceTree = "<group>"; };
+		664880D2215F7188006D89D3 /* LeftSidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSidePanelVC.swift; sourceTree = "<group>"; };
+		664880D4215F72B4006D89D3 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		664880D7215F7B95006D89D3 /* CenterVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
 		66D8509F215E5EBC00F23A5D /* Hitchhiker Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hitchhiker Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D850A2215E5EBC00F23A5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66D850A4215E5EBC00F23A5D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -59,6 +65,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		664880D6215F7B4B006D89D3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				664880D7215F7B95006D89D3 /* CenterVCDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		66D85096215E5EBC00F23A5D = {
 			isa = PBXGroup;
 			children = (
@@ -80,11 +94,11 @@
 		66D850A1215E5EBC00F23A5D /* Hitchhiker Dev */ = {
 			isa = PBXGroup;
 			children = (
+				664880D6215F7B4B006D89D3 /* Protocols */,
 				66D850B6215E94E200F23A5D /* Model */,
 				66D850B5215E94D500F23A5D /* View */,
 				66D850B4215E94C300F23A5D /* Controller */,
 				66D850A2215E5EBC00F23A5D /* AppDelegate.swift */,
-				66D850A4215E5EBC00F23A5D /* HomeVC.swift */,
 				66D850A6215E5EBC00F23A5D /* Main.storyboard */,
 				66D850A9215E5EBD00F23A5D /* Assets.xcassets */,
 				66D850AB215E5EBD00F23A5D /* LaunchScreen.storyboard */,
@@ -96,6 +110,9 @@
 		66D850B4215E94C300F23A5D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				66D850A4215E5EBC00F23A5D /* HomeVC.swift */,
+				664880D2215F7188006D89D3 /* LeftSidePanelVC.swift */,
+				664880D4215F72B4006D89D3 /* ContainerVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -255,8 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				664880D8215F7B95006D89D3 /* CenterVCDelegate.swift in Sources */,
 				66D850A5215E5EBC00F23A5D /* HomeVC.swift in Sources */,
+				664880D3215F7188006D89D3 /* LeftSidePanelVC.swift in Sources */,
 				66D850BA215EC60300F23A5D /* RoundImageView.swift in Sources */,
+				664880D5215F72B4006D89D3 /* ContainerVC.swift in Sources */,
 				66D850BC215ECB9B00F23A5D /* RoundedShadowView.swift in Sources */,
 				66D850A3215E5EBC00F23A5D /* AppDelegate.swift in Sources */,
 				66D850B8215E954900F23A5D /* GradientView.swift in Sources */,
