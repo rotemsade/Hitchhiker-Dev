@@ -34,6 +34,9 @@
                                     <constraint firstAttribute="height" constant="60" id="gdu-du-iRr"/>
                                 </constraints>
                                 <state key="normal" image="centerMapBtn"/>
+                                <connections>
+                                    <action selector="centerMapBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WDp-qn-8Zp"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="unX-q4-4A4" customClass="RoundedShadowView" customModule="Hitchhiker_Dev" customModuleProvider="target">
                                 <rect key="frame" x="16" y="75" width="382" height="90"/>
