@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>1007303988805-lmqijc6jch73srs0lmhjr8uojk3tl1cb.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1007303988805-lmqijc6jch73srs0lmhjr8uojk3tl1cb</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDPMtXYYSYzzp87r2Bbx8oTGIzppPIYIJw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1007303988805</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.galacoral.Hitchhiker-Dev</string>
+	<key>PROJECT_ID</key>
+	<string>htchhkr-81c37</string>
+	<key>STORAGE_BUCKET</key>
+	<string>htchhkr-81c37.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1007303988805:ios:954577a8d44f7faf</string>
+	<key>DATABASE_URL</key>
+	<string>https://htchhkr-81c37.firebaseio.com</string>
+</dict>
+</plist>
