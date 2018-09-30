@@ -89,6 +89,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                                                 print("Email invalid. Please try again.")
                                             case .emailAlreadyInUse:
                                                 print("That email is already in use. Please try again.")
+                                            case .weakPassword:
+                                                print("The password must be 6 characters long or more.")
                                             default:
                                                 print("An unexpected error occurred. Please try again.")
                                             }
