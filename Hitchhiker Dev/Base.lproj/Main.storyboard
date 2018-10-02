@@ -207,6 +207,7 @@
                     </view>
                     <connections>
                         <outlet property="actionBtn" destination="FgJ-Ew-eTe" id="55r-cX-B9h"/>
+                        <outlet property="centerMapBtn" destination="wKF-f8-pjS" id="tSO-zC-Ni9"/>
                         <outlet property="mapView" destination="7af-5R-X1c" id="Mrh-Qj-5Zv"/>
                     </connections>
                 </viewController>
