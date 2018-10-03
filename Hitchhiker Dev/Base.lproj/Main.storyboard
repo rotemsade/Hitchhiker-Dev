@@ -94,7 +94,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where are you going?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ajn-fz-Rms">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where are you going?" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ajn-fz-Rms">
                                                         <rect key="frame" x="22" y="1.6666666666666714" width="306" height="22"/>
                                                         <color key="textColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
@@ -208,6 +208,8 @@
                     <connections>
                         <outlet property="actionBtn" destination="FgJ-Ew-eTe" id="55r-cX-B9h"/>
                         <outlet property="centerMapBtn" destination="wKF-f8-pjS" id="tSO-zC-Ni9"/>
+                        <outlet property="destinationCircle" destination="E1Z-Cb-Mhl" id="7ZZ-MF-mB9"/>
+                        <outlet property="destinationTextField" destination="Ajn-fz-Rms" id="kD0-4W-Yfa"/>
                         <outlet property="mapView" destination="7af-5R-X1c" id="Mrh-Qj-5Zv"/>
                     </connections>
                 </viewController>
