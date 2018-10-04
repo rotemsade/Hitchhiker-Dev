@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class LoginVC: UIViewController, UITextFieldDelegate {
+class LoginVC: UIViewController, UITextFieldDelegate, Alertable {
     
     @IBOutlet weak var emailField: RoundedCornerTextField!
     @IBOutlet weak var passwordField: RoundedCornerTextField!
@@ -76,9 +76,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                         if let errorCode = AuthErrorCode(rawValue: error!._code) {
                             switch errorCode {
                             case .wrongPassword:
-                                print("Whoops! That was the wrong password!")
+                                self.showAlert("Whoops! That was the wrong password!")
                             default:
-                                print("An unexpected error occurred. Please try again.")
+                                self.showAlert("An unexpected error occurred. Please try again.")
                             }
                             if errorCode != .wrongPassword {
                                 Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
@@ -86,13 +86,13 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                                         if let errorCode = AuthErrorCode(rawValue: error!._code) {
                                             switch errorCode {
                                             case AuthErrorCode.invalidEmail:
-                                                print("Email invalid. Please try again.")
+                                                self.showAlert("Email invalid. Please try again.")
                                             case .emailAlreadyInUse:
-                                                print("That email is already in use. Please try again.")
+                                                self.showAlert("That email is already in use. Please try again.")
                                             case .weakPassword:
-                                                print("The password must be 6 characters long or more.")
+                                                self.showAlert("The password must be 6 characters long or more.")
                                             default:
-                                                print("An unexpected error occurred. Please try again.")
+                                                self.showAlert("An unexpected error occurred. Please try again.")
                                             }
                                         }
                                     } else {

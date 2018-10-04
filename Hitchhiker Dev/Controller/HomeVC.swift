@@ -14,7 +14,7 @@ import Firebase
 import Contacts
 import AddressBookUI
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, Alertable {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var actionBtn: RoundedShadowButton!
     @IBOutlet weak var centerMapBtn: UIButton!
@@ -136,8 +136,22 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func centerMapBtnWasPressed(_ sender: Any) {
-        centerMapOnUserLocation()
-        centerMapBtn.fadeTo(alphaValue: 0.0, withDuration: 0.2)
+        let currentUserId = Auth.auth().currentUser?.uid
+        DataService.instance.REF_USERS.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let userSnapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                for user in userSnapshot {
+                    if user.key == currentUserId {
+                        if user.hasChild("tripCoordinates") {
+                            self.zoom(toFitAnnotationFromMapView: self.mapView)
+                            self.centerMapBtn.fadeTo(alphaValue: 0.0, withDuration: 0.2)
+                        } else {
+                            self.centerMapOnUserLocation()
+                            self.centerMapBtn.fadeTo(alphaValue: 0.0, withDuration: 0.2)
+                        }
+                    }
+                }
+            }
+        })
     }
 }
 
@@ -192,6 +206,8 @@ extension HomeVC: MKMapViewDelegate {
         let lineRenderer = MKPolylineRenderer(overlay: self.route.polyline)
         lineRenderer.strokeColor = UIColor(displayP3Red: 216/255, green: 71/255, blue: 30/255, alpha: 0.75)
         lineRenderer.lineWidth = 3
+        
+        zoom(toFitAnnotationFromMapView: mapView)
         return lineRenderer
     }
     
@@ -207,9 +223,13 @@ extension HomeVC: MKMapViewDelegate {
         
         search.start { (response, error) in
             if (error != nil) {
+                self.shouldPresentLoadingView(false)
+                self.showAlert("There was an error while seraching for results, please try again.")
                 print("Search error \(String(describing: error))")
             } else {
                 if response?.mapItems.count == 0 {
+                    self.shouldPresentLoadingView(false)
+                    self.showAlert("There were no results. Please refine your search and try again.")
                     print("No results")
                 } else {
                     for mapItem in (response?.mapItems)! {
@@ -245,12 +265,32 @@ extension HomeVC: MKMapViewDelegate {
         
         directions.calculate { (response, error) in
             guard let response = response else {
+                self.showAlert("Sorry but we couldn't find a proper route, please try again")
                 print("Error calculating route, \(error.debugDescription)")
                 return
             }
             self.route = response.routes[0]
             self.mapView.addOverlay(self.route.polyline)
             self.shouldPresentLoadingView(false)
+        }
+    }
+    
+    func zoom(toFitAnnotationFromMapView mapView: MKMapView) {
+        if mapView.annotations.count != 0 {
+            var topLeftCoordinate = CLLocationCoordinate2D(latitude: -90, longitude: 180)
+            var bottomRightCoordinate = CLLocationCoordinate2D(latitude: 90, longitude: -180)
+            
+            for annotation in mapView.annotations where !annotation.isKind(of: DriverAnnotation.self) {
+                topLeftCoordinate.longitude = fmin(topLeftCoordinate.longitude, annotation.coordinate.longitude)
+                topLeftCoordinate.latitude = fmax(topLeftCoordinate.latitude, annotation.coordinate.latitude)
+                bottomRightCoordinate.longitude = fmax(bottomRightCoordinate.longitude, annotation.coordinate.longitude)
+                bottomRightCoordinate.latitude = fmin(bottomRightCoordinate.latitude, annotation.coordinate.latitude)
+            }
+            
+            var region = MKCoordinateRegion(center: CLLocationCoordinate2DMake(topLeftCoordinate.latitude - (topLeftCoordinate.latitude - bottomRightCoordinate.latitude) * 0.5, topLeftCoordinate.longitude + (bottomRightCoordinate.longitude - topLeftCoordinate.longitude) * 0.5 ), span: MKCoordinateSpan(latitudeDelta: fabs(topLeftCoordinate.latitude - bottomRightCoordinate.latitude) * 2.0, longitudeDelta: fabs(bottomRightCoordinate.longitude - topLeftCoordinate.longitude) * 2.0))
+            
+            region = mapView.regionThatFits(region)
+            mapView.setRegion(region, animated: true)
         }
     }
     

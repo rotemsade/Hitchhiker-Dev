@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class LeftSidePanelVC: UIViewController {
+class LeftSidePanelVC: UIViewController, Alertable {
     
     let appDelegate = AppDelegate.getAppDelegate()
     
@@ -111,6 +111,7 @@ class LeftSidePanelVC: UIViewController {
                     pickupModeSwitch.isHidden = true
                     loginOutBtn.setTitle("Sign Up / Login", for: .normal)
                 } catch (let error) {
+                    showAlert("There was an error signing out! Please try again.")
                     print("There was an error signing out,\(error)")
                 }
         }
