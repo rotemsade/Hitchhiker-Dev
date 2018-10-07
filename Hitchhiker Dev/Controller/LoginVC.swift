@@ -71,6 +71,8 @@ class LoginVC: UIViewController, UITextFieldDelegate, Alertable {
                             }
                         }
                         print("Email user authenticated successfully with Firebase")
+                        AppDelegate.getAppDelegate().MenuContainerVC.homeVC.viewDidLoad()
+                        AppDelegate.getAppDelegate().MenuContainerVC.homeVC.viewWillAppear(true)
                         self.dismiss(animated: true, completion: nil)
                     } else {
                         if let errorCode = AuthErrorCode(rawValue: error!._code) {
@@ -106,6 +108,8 @@ class LoginVC: UIViewController, UITextFieldDelegate, Alertable {
                                             }
                                         }
                                         print("Successfully created a new user with Firebase")
+                                        AppDelegate.getAppDelegate().MenuContainerVC.homeVC.viewDidLoad()
+                                        AppDelegate.getAppDelegate().MenuContainerVC.homeVC.viewWillAppear(true)
                                         self.dismiss(animated: true, completion: nil)
                                     }
                                 })
