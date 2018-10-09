@@ -219,7 +219,7 @@
                     </view>
                     <connections>
                         <outlet property="actionBtn" destination="FgJ-Ew-eTe" id="55r-cX-B9h"/>
-                        <outlet property="canelTripBtn" destination="leY-g5-Hf6" id="121-hI-F4M"/>
+                        <outlet property="cancelTripBtn" destination="leY-g5-Hf6" id="B4f-GX-cxn"/>
                         <outlet property="centerMapBtn" destination="wKF-f8-pjS" id="tSO-zC-Ni9"/>
                         <outlet property="destinationCircle" destination="E1Z-Cb-Mhl" id="7ZZ-MF-mB9"/>
                         <outlet property="destinationTextField" destination="Ajn-fz-Rms" id="kD0-4W-Yfa"/>

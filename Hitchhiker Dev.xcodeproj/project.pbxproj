@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		020F961D73F368EECE47AF1E /* Pods_Hitchhiker_Dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BF52D69AF2D0BE739A552C /* Pods_Hitchhiker_Dev.framework */; };
+		661007B2216CE9CB0056B613 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 661007B1216CE9CB0056B613 /* GoogleService-Info.plist */; };
 		664880D3215F7188006D89D3 /* LeftSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664880D2215F7188006D89D3 /* LeftSidePanelVC.swift */; };
 		664880D5215F72B4006D89D3 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664880D4215F72B4006D89D3 /* ContainerVC.swift */; };
 		664880D8215F7B95006D89D3 /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664880D7215F7B95006D89D3 /* CenterVCDelegate.swift */; };
@@ -15,7 +16,6 @@
 		664880DF215FF939006D89D3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664880DE215FF939006D89D3 /* LoginVC.swift */; };
 		664880E121600A84006D89D3 /* RoundedCornerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664880E021600A84006D89D3 /* RoundedCornerTextField.swift */; };
 		664880E621603DEF006D89D3 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664880E521603DEF006D89D3 /* DataService.swift */; };
-		66BBD4E72160E37600B9B2A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66BBD4E62160E37600B9B2A8 /* GoogleService-Info.plist */; };
 		66BBD50721610B8E00B9B2A8 /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BBD50621610B8E00B9B2A8 /* UpdateService.swift */; };
 		66BBD50921612F4D00B9B2A8 /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BBD50821612F4D00B9B2A8 /* DriverAnnotation.swift */; };
 		66BBD50B2165761300B9B2A8 /* PassengerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BBD50A2165761200B9B2A8 /* PassengerAnnotation.swift */; };
@@ -38,6 +38,7 @@
 /* Begin PBXFileReference section */
 		2FB36C5E9F4E1400A5D9C2CC /* Pods-Hitchhiker Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hitchhiker Dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hitchhiker Dev/Pods-Hitchhiker Dev.debug.xcconfig"; sourceTree = "<group>"; };
 		30571EA9EB84D46320F6905A /* Pods-Hitchhiker Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hitchhiker Dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hitchhiker Dev/Pods-Hitchhiker Dev.release.xcconfig"; sourceTree = "<group>"; };
+		661007B1216CE9CB0056B613 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		664880D2215F7188006D89D3 /* LeftSidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSidePanelVC.swift; sourceTree = "<group>"; };
 		664880D4215F72B4006D89D3 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		664880D7215F7B95006D89D3 /* CenterVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +46,6 @@
 		664880DE215FF939006D89D3 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		664880E021600A84006D89D3 /* RoundedCornerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerTextField.swift; sourceTree = "<group>"; };
 		664880E521603DEF006D89D3 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		66BBD4E62160E37600B9B2A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		66BBD50621610B8E00B9B2A8 /* UpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateService.swift; sourceTree = "<group>"; };
 		66BBD50821612F4D00B9B2A8 /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
 		66BBD50A2165761200B9B2A8 /* PassengerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerAnnotation.swift; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 				66D850A9215E5EBD00F23A5D /* Assets.xcassets */,
 				66D850AB215E5EBD00F23A5D /* LaunchScreen.storyboard */,
 				66D850AE215E5EBD00F23A5D /* Info.plist */,
-				66BBD4E62160E37600B9B2A8 /* GoogleService-Info.plist */,
+				661007B1216CE9CB0056B613 /* GoogleService-Info.plist */,
 			);
 			path = "Hitchhiker Dev";
 			sourceTree = "<group>";
@@ -257,7 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66D850AD215E5EBD00F23A5D /* LaunchScreen.storyboard in Resources */,
-				66BBD4E72160E37600B9B2A8 /* GoogleService-Info.plist in Resources */,
+				661007B2216CE9CB0056B613 /* GoogleService-Info.plist in Resources */,
 				66D850AA215E5EBD00F23A5D /* Assets.xcassets in Resources */,
 				66D850A8215E5EBC00F23A5D /* Main.storyboard in Resources */,
 			);
