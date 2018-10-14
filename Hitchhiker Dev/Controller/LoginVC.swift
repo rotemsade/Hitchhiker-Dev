@@ -63,10 +63,10 @@ class LoginVC: UIViewController, UITextFieldDelegate, Alertable {
                     if error == nil {
                         if let user = user {
                             if self.segmentedControl.selectedSegmentIndex == 0 {
-                                let userData = ["provider": user.providerID] as [String: Any]
+                                let userData = [FB_PROVIDER: user.providerID] as [String: Any]
                                 DataService.instance.createFirebaseDBUser(uid: user.uid, userData: userData, isDriver: false)
                             } else {
-                                let userData = ["provider": user.providerID, "userIsDriver": true, "isPickupModeEnabled": false, "driverIsOnTrip": false] as [String: Any]
+                                let userData = [FB_PROVIDER: user.providerID, USER_IS_DRIVER: true, ACCOUNT_PICKUP_MODE_ENABLED: false, DRIVER_IS_ON_TRIP: false] as [String: Any]
                                 DataService.instance.createFirebaseDBUser(uid: user.uid, userData: userData, isDriver: true)
                             }
                         }
@@ -78,9 +78,9 @@ class LoginVC: UIViewController, UITextFieldDelegate, Alertable {
                         if let errorCode = AuthErrorCode(rawValue: error!._code) {
                             switch errorCode {
                             case .wrongPassword:
-                                self.showAlert("Whoops! That was the wrong password!")
+                                self.showAlert(ERROR_MSG_WRONG_PASSWORD)
                             default:
-                                self.showAlert("An unexpected error occurred. Please try again.")
+                                self.showAlert(ERROR_MSG_UNEXPECTED_ERROR)
                             }
                             if errorCode != .wrongPassword {
                                 Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
@@ -88,22 +88,22 @@ class LoginVC: UIViewController, UITextFieldDelegate, Alertable {
                                         if let errorCode = AuthErrorCode(rawValue: error!._code) {
                                             switch errorCode {
                                             case AuthErrorCode.invalidEmail:
-                                                self.showAlert("Email invalid. Please try again.")
+                                                self.showAlert(ERROR_MSG_INVALID_EMAIL)
                                             case .emailAlreadyInUse:
-                                                self.showAlert("That email is already in use. Please try again.")
+                                                self.showAlert(ERROR_MSG_EMAIL_ALREADY_IN_USE)
                                             case .weakPassword:
-                                                self.showAlert("The password must be 6 characters long or more.")
+                                                self.showAlert(ERROR_MSG_PASSWORD_TOO_SHORT)
                                             default:
-                                                self.showAlert("An unexpected error occurred. Please try again.")
+                                                self.showAlert(ERROR_MSG_UNEXPECTED_ERROR)
                                             }
                                         }
                                     } else {
                                         if let user = user {
                                             if self.segmentedControl.selectedSegmentIndex == 0 {
-                                                let userData = ["provider": user.providerID] as [String: Any]
+                                                let userData = [FB_PROVIDER: user.providerID] as [String: Any]
                                                 DataService.instance.createFirebaseDBUser(uid: user.uid, userData: userData, isDriver: false)
                                             } else {
-                                                let userData = ["provider": user.providerID, "userIsDriver": true, "isPickupModeEnabled": false, "driverIsOnTrip": false] as [String: Any]
+                                                let userData = [FB_PROVIDER: user.providerID, USER_IS_DRIVER: true, ACCOUNT_PICKUP_MODE_ENABLED: false, DRIVER_IS_ON_TRIP: false] as [String: Any]
                                                 DataService.instance.createFirebaseDBUser(uid: user.uid, userData: userData, isDriver: true)
                                             }
                                         }

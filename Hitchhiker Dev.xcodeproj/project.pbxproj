@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		020F961D73F368EECE47AF1E /* Pods_Hitchhiker_Dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BF52D69AF2D0BE739A552C /* Pods_Hitchhiker_Dev.framework */; };
 		661007B2216CE9CB0056B613 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 661007B1216CE9CB0056B613 /* GoogleService-Info.plist */; };
+		661007B5216F33530056B613 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661007B4216F33530056B613 /* Constants.swift */; };
 		664880D3215F7188006D89D3 /* LeftSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664880D2215F7188006D89D3 /* LeftSidePanelVC.swift */; };
 		664880D5215F72B4006D89D3 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664880D4215F72B4006D89D3 /* ContainerVC.swift */; };
 		664880D8215F7B95006D89D3 /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664880D7215F7B95006D89D3 /* CenterVCDelegate.swift */; };
@@ -39,6 +40,7 @@
 		2FB36C5E9F4E1400A5D9C2CC /* Pods-Hitchhiker Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hitchhiker Dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hitchhiker Dev/Pods-Hitchhiker Dev.debug.xcconfig"; sourceTree = "<group>"; };
 		30571EA9EB84D46320F6905A /* Pods-Hitchhiker Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hitchhiker Dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hitchhiker Dev/Pods-Hitchhiker Dev.release.xcconfig"; sourceTree = "<group>"; };
 		661007B1216CE9CB0056B613 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		661007B4216F33530056B613 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		664880D2215F7188006D89D3 /* LeftSidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSidePanelVC.swift; sourceTree = "<group>"; };
 		664880D4215F72B4006D89D3 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		664880D7215F7B95006D89D3 /* CenterVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		661007B3216F33200056B613 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				661007B4216F33530056B613 /* Constants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		664880D6215F7B4B006D89D3 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +147,7 @@
 		66D850A1215E5EBC00F23A5D /* Hitchhiker Dev */ = {
 			isa = PBXGroup;
 			children = (
+				661007B3216F33200056B613 /* Resources */,
 				664880E421603DC5006D89D3 /* Services */,
 				664880D9215FDD02006D89D3 /* Extensions */,
 				664880D6215F7B4B006D89D3 /* Protocols */,
@@ -326,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				664880D8215F7B95006D89D3 /* CenterVCDelegate.swift in Sources */,
+				661007B5216F33530056B613 /* Constants.swift in Sources */,
 				664880E621603DEF006D89D3 /* DataService.swift in Sources */,
 				66BBD50D2165E4E500B9B2A8 /* UIViewControllerExt.swift in Sources */,
 				66D850A5215E5EBC00F23A5D /* HomeVC.swift in Sources */,
@@ -495,7 +507,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JJ644DK4VS;
 				INFOPLIST_FILE = "Hitchhiker Dev/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -515,7 +527,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JJ644DK4VS;
 				INFOPLIST_FILE = "Hitchhiker Dev/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
